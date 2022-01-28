@@ -1,0 +1,525 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Dancing+Script:wght@400;500&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins&display=swap");
+
+:root {
+  /* font family */
+  --font-arizonia: "Arizonia", cursive;
+  --font-dancing-script: "Dancing Script", cursive;
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-play-fair: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  /* color */
+  --background-dark: rgba(226, 226, 226, 0.445);
+  --background-light: #fff;
+  /* transparant */
+  --trnsparent-25: rgba(0, 0, 0, 0.25);
+  --trnsparent-50: rgba(0, 0, 0, 0.5);
+}
+
+/* global css */
+.opacity-background {
+  background: rgba(255, 255, 255, 0.589);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+* {
+  font-family: var(--font-play-fair);
+  transition: 0.3s;
+}
+
+.container {
+  padding: 20px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  background-color: var(--trnsparent-25);
+  padding: 5px 17px;
+  border-radius: 20px;
+  border: 1px solid whitesmoke;
+  color: white;
+  font-family: var(--font-poppins);
+}
+
+.button:hover {
+  color: bisque;
+  background-color: var(--trnsparent-50);
+}
+
+.button-dark {
+  background-color: var(--trnsparent-50);
+  padding: 5px 17px;
+  border-radius: 20px;
+  border: 1px solid whitesmoke;
+  color: white;
+  font-family: var(--font-poppins);
+}
+
+.button-dark:hover {
+  color: white;
+  background-color: rgb(143, 118, 64);
+}
+
+/* Home */
+
+.home__section {
+  min-height: 100vh;
+  background: url("../img/wedding-hero-20210922.jpg") fixed 100%;
+  background-repeat: repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-position-x: 30%;
+  background-position-y: 30%;
+}
+
+.background__gradient {
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0.25) 0%,
+    rgba(0, 0, 0, 0.7517401392111369) 85%
+  );
+  min-height: 100vh;
+  width: 100%;
+}
+
+.row-home {
+  height: 90vh;
+  justify-content: space-around;
+}
+
+.wedding__judul-home {
+  font-family: var(--font-play-fair);
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.home__name {
+  font-family: var(--font-great-vibes);
+  font-size: 120px;
+  color: white;
+}
+
+@media only screen and (max-width: 834px) {
+  .home__name {
+    padding-top: 20vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home__name {
+    font-size: 65px;
+  }
+
+  .wedding__judul-home {
+    font-size: 12px;
+  }
+}
+
+.top__text-home {
+  height: 60%;
+}
+.bottom__text-home {
+  text-align: center;
+  color: white;
+}
+
+.ayat__alkitab {
+  padding-top: 15px;
+}
+/* end Home */
+
+/* keterangan section */
+.background__texture {
+  background-size: 48px 48px;
+  background: url("../img/texture-background.jpg") fixed 100%;
+  background-repeat: repeat;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-position: 0 0, 24px 24px;
+}
+
+.ket-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ket-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.ornamen-1 {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding-bottom: 320px;
+}
+.ornamen-ket-top {
+  display: block;
+  padding: 20px 0;
+  align-items: center;
+  width: 250px;
+}
+
+.isi-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-name {
+  text-align: center;
+  font-family: var(--font-great-vibes);
+  font-size: 60px;
+}
+
+.garis {
+  width: 300px;
+  height: 4px;
+  border-bottom: 1px solid black;
+}
+
+.garis-ket {
+  padding-bottom: 10px;
+}
+
+.nama-lengkap {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 30px;
+}
+
+.anak-dari {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.dan {
+  font-family: var(--font-dancing-script);
+  font-size: 140px;
+  padding: 0 90px;
+  padding-bottom: 150px;
+}
+
+@media only screen and (max-width: 834px) {
+  .ket-content {
+    flex-direction: column;
+  }
+  .ornamen-1 {
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .dan {
+    padding-bottom: 0;
+  }
+}
+/* end keterangn section */
+
+/* date keterangan section */
+.date__section {
+  background: url("../img/ring.jpeg") fixed 100%;
+  background-repeat: repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 1500px 700px;
+}
+
+.date-background {
+  background-color: var(--trnsparent-50);
+}
+
+.date-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bulat {
+  display: flex;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: var(--trnsparent-50);
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border: 1px solid rgba(245, 245, 245, 0.651);
+  font-family: var(--font-dancing-script);
+  box-shadow: 3px 3px 3px var(--trnsparent-25);
+}
+
+.top .bulat {
+  font-size: 28px;
+}
+
+.top .date-ket {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: var(--font-great-vibes);
+  padding: 20px 0;
+}
+
+.bot {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 25px;
+  justify-content: center;
+}
+
+.bulat-bot {
+  height: 100px;
+  width: 100px;
+}
+
+.coundown-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.coundown-ket {
+  font-family: var(--font-great-vibes);
+  color: white;
+  font-size: 30px;
+  padding-top: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .bulat-bot {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/* acara section */
+.ornamen-acara {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acara-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.undangan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.undangan h1 {
+  font-family: var(--font-dancing-script);
+  font-size: 65px;
+}
+
+.undangan-button {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 834px) {
+.acara-list{
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+}
+/* end acara section */
+
+/* galeri section  */
+.background__texture-galeri {
+  background-color: var(--background-light);
+  background-size: 48px 48px;
+  background: url("../img/texture-background.jpg") fixed 100%;
+  background-repeat: repeat;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-position: 0 0, 24px 24px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box .dream {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.box .dream img {
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px var(--trnsparent-25);
+}
+
+
+
+
+.box .dream img:hover {
+  transform: scale(1.2);
+}
+
+.judul-galery {
+  font-family: var(--font-dancing-script);
+  font-size: 90px;
+}
+
+@media only screen and (max-width: 834px) {
+  .box .dream img {
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+
+  .judul-galery {
+    font-size: 50px;
+  }
+
+  .box {
+    margin: 0;
+  }
+}
+
+/* end galeri */
+
+/* komentar  section*/
+.komentar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-comment{
+  display: flex;
+  gap: 30px;
+}
+
+.komentar-container h1 {
+  font-family: var(--font-dancing-script);
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+
+.input-coment{
+  background-color: var(--trnsparent-50);
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  padding:0 10px ;
+  text-align: center;
+  box-shadow: 3px 3px 3px var(--trnsparent-25);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  
+  color: rgba(255, 255, 255, 0.432);
+  text-align: center;
+}
+
+
+.bot-comment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  width: 100%;
+  
+}
+
+
+.textarea{
+  text-align: left;
+}
+
+
+@media only screen and (max-width: 834px) {
+  .top-coment{
+    flex-direction: column;
+  }
+
+  .bot-comment label{
+    text-align: center;
+  }
+}
+/* end komentar section */
+
+
+
+/* isi komentar section */
+.isi-komentar-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box-comment{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  width: 80%;
+  text-align: left;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+.box-comment .top{
+  display: flex;
+  gap: 20px;
+}
+.isi-komentar{
+  width: 100%;
+  text-align: left;
+}
+
+
+footer{
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 30px 0;
+  font-family: var(--font-poppins);
+}

@@ -43,3 +43,33 @@ setInterval(function(){
     acara();
 }, 1000);
 
+
+
+// audio play
+var mySong = document.getElementById("mysong");
+var icon = document.getElementById("icon-audio");
+var playPause = document.getElementById("play-pause");
+
+playPause.onclick =  function(){
+    if(mySong.paused){
+        mySong.play();
+        icon.classList.remove("bi-play-fill");
+        icon.classList.add("bi-pause-fill");
+    }else{
+        mySong.pause();
+        icon.classList.add("bi-play-fill");
+        icon.classList.remove("bi-pause-fill");
+    }
+}
+
+
+
+// toggle undangan
+var awalSection = document.getElementById("toggle-undangan");
+var toggleAwal = document.getElementById("awal-button");
+
+toggleAwal.onclick = function(){
+    
+    awalSection.classList.add("awal-active")
+}
+

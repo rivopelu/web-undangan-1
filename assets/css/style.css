@@ -25,6 +25,12 @@
   z-index: -1;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   font-family: var(--font-play-fair);
   transition: 0.3s;
@@ -45,6 +51,7 @@ a {
   border: 1px solid whitesmoke;
   color: white;
   font-family: var(--font-poppins);
+  cursor: pointer;
 }
 
 .button:hover {
@@ -65,6 +72,62 @@ a {
   color: white;
   background-color: rgb(143, 118, 64);
 }
+
+
+/* awal undangn section */
+.awal__section {
+  min-height: 100vh;
+  background: url("../img/galery/5.jpg") ;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 1920px 1080px;
+  background-position-x: 30%;
+  background-position-y: 30%;
+  
+  z-index: 1000;
+  
+}
+
+.row-awal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: c;
+}
+
+.row-awal .awal-judul{
+  font-family: var(--font-poppins);
+  margin: 20px 0;
+}
+
+
+.row-awal .home__name{
+  padding-top: 20px;
+
+}
+
+.fixed__top{
+  transform: translateY(0);
+  transition: .3s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.awal-active{
+  transition: .3s;
+  top: -100vh;
+  position: fix;
+  
+}
+
+
+
+
+
 
 /* Home */
 
@@ -350,12 +413,10 @@ a {
 }
 
 @media only screen and (max-width: 834px) {
-.acara-list{
-  flex-direction: column;
-  gap: 20px;
-}
-
-
+  .acara-list {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 /* end acara section */
 
@@ -389,9 +450,6 @@ a {
   border-radius: 20px;
   box-shadow: 3px 3px 3px var(--trnsparent-25);
 }
-
-
-
 
 .box .dream img:hover {
   transform: scale(1.2);
@@ -427,7 +485,7 @@ a {
   justify-content: center;
 }
 
-.top-comment{
+.top-comment {
   display: flex;
   gap: 30px;
 }
@@ -438,62 +496,56 @@ a {
   margin: 20px 0;
 }
 
-
-.input-coment{
+.input-coment {
   background-color: var(--trnsparent-50);
   border: 1px solid white;
   color: white;
   border-radius: 20px;
-  padding:0 10px ;
+  padding: 0 10px;
   text-align: center;
   box-shadow: 3px 3px 3px var(--trnsparent-25);
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+
   color: rgba(255, 255, 255, 0.432);
   text-align: center;
 }
 
-
-.bot-comment{
+.bot-comment {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
   width: 100%;
-  
 }
 
-
-.textarea{
+.textarea {
   text-align: left;
 }
 
-
 @media only screen and (max-width: 834px) {
-  .top-coment{
+  .top-coment {
     flex-direction: column;
   }
 
-  .bot-comment label{
+  .bot-comment label {
     text-align: center;
   }
 }
 /* end komentar section */
 
-
-
 /* isi komentar section */
-.isi-komentar-container{
+.isi-komentar-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.box-comment{
+.box-comment {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -503,17 +555,16 @@ a {
   padding-top: 20px;
   margin-bottom: 10px;
 }
-.box-comment .top{
+.box-comment .top {
   display: flex;
   gap: 20px;
 }
-.isi-komentar{
+.isi-komentar {
   width: 100%;
   text-align: left;
 }
 
-
-footer{
+footer {
   background-color: gray;
   display: flex;
   flex-direction: column;
@@ -522,4 +573,33 @@ footer{
   color: white;
   padding: 30px 0;
   font-family: var(--font-poppins);
+}
+
+/* audio */
+
+.audio-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: var(--trnsparent-25);
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 3px 3px 3px var(--trnsparent-25);
+  top: 90%;
+  left: 90%;
+  cursor: pointer;
+}
+
+#play-pause {
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 834px) {
+  .audio-box {
+    left: 80%;
+  }
 }

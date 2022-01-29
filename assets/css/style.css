@@ -125,6 +125,15 @@ a {
 }
 
 
+@media only screen and (max-width: 350px) {
+  .row-awal .awal-judul{
+    font-size: 20px;
+  }
+
+  .row-awal .ornamen-ket-awal{
+    width: 40px;
+  }
+}
 
 
 
